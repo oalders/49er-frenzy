@@ -8,7 +8,7 @@ go build
 
 ## Run
 
-./build
+./frenzy
 
 ## Browse
 

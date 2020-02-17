@@ -19,7 +19,6 @@ func Run() {
 			"grid_1": map[string][]int{"x": uniqueList([]int{}), "y": uniqueList([]int{})},
 			"grid_2": map[string][]int{"x": uniqueList([]int{}), "y": uniqueList([]int{})},
 			"grid_3": map[string][]int{"x": uniqueList([]int{}), "y": uniqueList([]int{})},
-			"grid_4": map[string][]int{"x": uniqueList([]int{}), "y": uniqueList([]int{})},
 		})
 	})
 

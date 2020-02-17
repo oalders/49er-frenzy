@@ -3,21 +3,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="row">
-      <div class="col-md-6">
-        {{ template "grid.tmpl" $.grid_1 }}
-      </div>
-      <div class="col-md-6">
-        {{ template "grid.tmpl" $.grid_2 }}
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        {{ template "grid.tmpl" $.grid_3 }}
-      </div>
-      <div class="col-md-6">
-        {{ template "grid.tmpl" $.grid_4 }}
-      </div>
-    </div>
+    {{ template "grid.tmpl" $.grid_1 }}
+    {{ template "summary.tmpl" }}
+    <br />
+    <br />
+    {{ template "grid.tmpl" $.grid_2 }}
+    {{ template "summary.tmpl" }}
+    <br />
+    <br />
+    {{ template "grid.tmpl" $.grid_3 }}
+    {{ template "summary.tmpl" }}
   </body>
 </html>

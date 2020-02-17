@@ -15,10 +15,19 @@ func Run() {
 	r.LoadHTMLGlob(filepath.Join(RootDir(), "templates", "*tmpl"))
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl", gin.H{
-			"title":  "Main website",
-			"grid_1": map[string][]int{"x": uniqueList([]int{}), "y": uniqueList([]int{})},
-			"grid_2": map[string][]int{"x": uniqueList([]int{}), "y": uniqueList([]int{})},
-			"grid_3": map[string][]int{"x": uniqueList([]int{}), "y": uniqueList([]int{})},
+			"title": "Main website",
+			"grid_1": map[string][]int{
+				"x": uniqueList([]int{}),
+				"y": uniqueList([]int{}),
+			},
+			"grid_2": map[string][]int{
+				"x": uniqueList([]int{}),
+				"y": uniqueList([]int{}),
+			},
+			"grid_3": map[string][]int{
+				"x": uniqueList([]int{}),
+				"y": uniqueList([]int{}),
+			},
 		})
 	})
 

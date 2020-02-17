@@ -4,6 +4,9 @@ Create 7x7 grids for multiplication
 
 ## Build
 
+cmd/frenzy/
+go build
+
 go build
 
 ## Run

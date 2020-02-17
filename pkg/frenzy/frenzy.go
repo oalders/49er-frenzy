@@ -1,16 +1,18 @@
-package main
+package frenzy
 
 import (
 	"math/rand"
 	"net/http"
+	"path"
 	"path/filepath"
+	"runtime"
 
 	"github.com/gin-gonic/gin"
 )
 
-func main() {
+func Run() {
 	r := gin.Default()
-	r.LoadHTMLGlob(filepath.Join("templates", "*tmpl"))
+	r.LoadHTMLGlob(filepath.Join(RootDir(), "templates", "*tmpl"))
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl", gin.H{
 			"title":  "Main website",
@@ -44,4 +46,12 @@ func uniqueList(list []int) []int {
 	}
 
 	return list[:7]
+}
+
+// https://stackoverflow.com/a/59442571/406224
+func RootDir() string {
+	_, b, _, _ := runtime.Caller(0)
+	d := path.Join(path.Dir(b), "..")
+
+	return filepath.Dir(d)
 }

@@ -1,4 +1,4 @@
-module github.com/oalders/49er-frenzy/pkg/frenzy
+module github.com/oalders/49er-frenzy
 
 go 1.13
 
